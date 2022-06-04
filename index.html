@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/stylez.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27/dist/skin-win8/ui.fancytree.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Administracion</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Sesión</a>
+          </li>
+          <li>
+            <a href="#">Opciones</a>
+          </li>
+          <li>
+            <a href="#">Ventana</a>
+          </li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="left">
+        <button>
+          <img class="icon" src="/assets/icons/bodega.png" />
+          Bodegas
+        </button>
+        <button>
+          <img class="icon" src="/assets/icons/bodega.png" />
+          Bodegas
+        </button>
+        <button>
+          <i class="fa fa-cloud"></i>
+          Ventas
+        </button>
+        <button>
+          <img class="icon" src="/assets/icons/tarjetas.png" />
+          Tarjetas
+        </button>
+        <button>
+          <i class="fa fa-cloud"></i>
+          Compras
+        </button>
+        <div class="fileManager">
+          <div id="tree">
+            <ul id="treeData" style="display: none">
+              <li id="id3" class="folder">
+                Operaciones
+                <ul>
+                  <li id="id3" class="folder">Ajustes de inventarios</li>
+                </ul>
+              </li>
+              <li id="id1" title="Look, a tool tip!">
+                item1 with key and tooltip
+              </li>
+              <li id="id2">item2</li>
+              <li id="id3" class="folder">
+                Folder
+                <em>with some</em>
+                children
+                <ul>
+                  <li id="id3.1">
+                    Sub-item 3.1
+                    <ul>
+                      <li id="id3.1.1">Sub-item 3.1.1</li>
+                      <li id="id3.1.2">Sub-item 3.1.2</li>
+                      <li id="id3.1.3">Sub-item 3.1.3</li>
+                    </ul>
+                  </li>
+
+                  <li id="id3.2">
+                    Sub-item 3.2
+                    <ul>
+                      <li id="id3.2.1">Sub-item 3.2.1</li>
+                      <li id="id3.2.2">Sub-item 3.2.2</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li id="id4" class="expanded">
+                Document with some children (expanded on init)
+                <ul>
+                  <li id="id4.1" class="active focused">
+                    Sub-item 4.1 (active and focus on init)
+                    <ul>
+                      <li id="id4.1.1">Sub-item 4.1.1</li>
+                      <li id="id4.1.2">Sub-item 4.1.2</li>
+                    </ul>
+                  </li>
+
+                  <li id="id4.2">
+                    Sub-item 4.2
+                    <ul>
+                      <li id="id4.2.1">Sub-item 4.2.1</li>
+                      <li id="id4.2.2">Sub-item 4.2.2</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="modals">
+          <div class="modal">
+            <div class="titleBar">
+              Recepcion de transferencias
+              <div class="titleBar_btn" style="gap: 0.5rem">
+                <i class="fa fa-cloud"></i>
+                <i class="fa fa-cloud"></i>
+                <i class="fa fa-cloud"></i>
+              </div>
+            </div>
+            <div class="topBar">
+              <div class="topBar_btn">
+                <img class="icon" src="/assets/icons/tarjetas.png" />
+                Nuevo[F2]
+              </div>
+              <div class="topBar_btn">
+                <img class="icon" src="/assets/icons/tarjetas.png" />
+                Emitir
+              </div>
+              <div class="topBar_btn">
+                <img class="icon" src="/assets/icons/tarjetas.png" />
+                Salir[Esc]
+              </div>
+            </div>
+            <div class="row" style="justify-content: space-between">
+              <div class="row" style="gap: 0.5rem">
+                <label for="">Contenedor:</label>
+                <input class="input" type="text" />
+              </div>
+              <div class="col">
+                <table>
+                  <tr>
+                    <th>Orden Egr</th>
+                    <th>Guia de remision</th>
+                    <th>Pedido N</th>
+                  </tr>
+                  <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                  </tr>
+                  <tr>
+                    <td>Centro comercial</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="row" style="justify-content: center">
+              <button style="color: red">CERRAR GUIA</button>
+            </div>
+            <div>
+              <div
+                class="row"
+                style="
+                  padding-bottom: 0;
+                  margin-bottom: -0.1rem;
+                  padding-left: 0;
+                "
+              >
+                <button
+                  class="tabButton active tabLink"
+                  onclick="openCity(event,'London')"
+                >
+                  Datos de Cabecera
+                </button>
+                <button
+                  class="tabButton tabLink"
+                  onclick="openCity(event,'Paris')"
+                >
+                  Detalles del Movimiento
+                </button>
+              </div>
+
+              <div id="London" class="col tabContent city">
+                <div class="row" style="display: block">
+                  <div class="row" style="justify-self: stretch">
+                    <div class="col" style="gap: 0.8rem">
+                      <label for="">Producto:</label>
+                      <label for="">Cod. Producto:</label>
+                      <label for="">Cantidad:</label>
+                      <label for="">Observacion:</label>
+                    </div>
+                    <div class="col" style="gap: 0.5rem; flex-basis: 80%">
+                      <input type="text" />
+                      <div
+                        class="row"
+                        style="padding: 0; justify-content: space-between"
+                      >
+                        <div class="col" style="gap: 0.5rem">
+                          <input type="text" />
+                          <input type="number" />
+                        </div>
+                        <div class="row" style="padding: 0">
+                          <div class="col" style="gap: 0.5rem">
+                            <label for="">Codigo de barras:</label>
+                            <label for="">Estado:</label>
+                          </div>
+                          <div class="col" style="gap: 0.5rem">
+                            <input type="text" />
+                            <select name="cars" id="cars">
+                              <option value="BUEN ESTADO">BUEN ESTADO</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <input type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div class="row" style="width: 100%; justify-content: center">
+                  <table style="height: 8rem; width: 100%">
+                    <tr>
+                      <th>Codigo</th>
+                      <th>Nombre</th>
+                      <th>Cantidad</th>
+                      <th>Cantidad</th>
+                      <th>Estado</th>
+                      <th>Observaciones</th>
+                    </tr>
+                    <tr>
+                      <td>107780</td>
+                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>BUEN ESTADO</td>
+                      <td>BUEN ESTADO</td>
+                    </tr>
+                    <tr>
+                      <td>107780</td>
+                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>BUEN ESTADO</td>
+                      <td>BUEN ESTADO</td>
+                    </tr>
+                    <tr>
+                      <td>107780</td>
+                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>BUEN ESTADO</td>
+                      <td>BUEN ESTADO</td>
+                    </tr>
+                    <tr>
+                      <td>107780</td>
+                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>BUEN ESTADO</td>
+                      <td>BUEN ESTADO</td>
+                    </tr>
+                    <tr>
+                      <td>107780</td>
+                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>BUEN ESTADO</td>
+                      <td>BUEN ESTADO</td>
+                    </tr>
+                    <tr>
+                      <td>107780</td>
+                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>BUEN ESTADO</td>
+                      <td>BUEN ESTADO</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <div
+                id="Paris"
+                class="row tabContent city col"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="bottomBar">
+          <i class="fa fa-cloud"></i>
+          <input disabled class="bBMsg" type="text" />
+          <i class="fa fa-cloud"></i>
+          <input disabled class="bBUser" type="text" />
+          <i class="fa fa-cloud"></i>
+          <input disabled class="bBDB" type="text" />
+          <i class="fa fa-cloud"></i>
+          <i class="fa fa-cloud"></i>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.fancytree/2.38.1/jquery.fancytree-all.min.js"
+    integrity="sha512-QbyBH1bMtD6tiB+0k1D6LNU/k3pAADcDhEKdQjiY+Gxt63CA9aE+r0A0vFeuL44a0XPv/xpIVqWcMO4m+AFkVw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="js/main.js"></script>
+</html>

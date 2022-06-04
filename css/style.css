@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: calc(4px + (10 - 4) * ((100vw - 320px) / (1440 - 320)));
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style-type: none;
+  background-color: lightgray;
+  padding: 0.3rem 1rem;
+  height: 5%;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+header li a {
+  color: black;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+}
+.fileManager {
+  height: 100%;
+}
+tr td {
+  overflow-x: hidden;
+  text-align: end;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.modals {
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+}
+.modal {
+  background-color: lightgray;
+  width: 80%;
+
+  padding: 0.2rem;
+}
+.titleBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: linear-gradient(
+    360deg,
+    rgba(191, 217, 255, 1) 0%,
+    rgba(152, 172, 204, 1) 68%,
+    rgba(132, 145, 178, 1) 100%
+  );
+}
+.titleBar_btn {
+  display: flex;
+  flex-direction: row;
+}
+.topBar {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid hsl(0, 0%, 45%);
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  height: 1rem;
+  padding: 0.5rem;
+}
+
+table,
+th,
+td {
+  background-color: white;
+  border: 1px hsl(0, 0%, 65%) solid;
+}
+
+table {
+  white-space: nowrap;
+  overflow: scroll;
+  border-collapse: collapse;
+  display: block;
+}
+table * {
+  overflow: hidden;
+}
+th,
+td {
+  padding: 0.3rem 0.5rem;
+  border-top-width: 0;
+  border-left-width: 0;
+}
+.tabContent .col label {
+  margin-left: 1rem;
+}
+.tabContent input,
+select {
+  margin-left: 0.5rem;
+}
+.tabContent .row {
+  align-items: center;
+}
+
+.topBar_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bottomBar {
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;
+  height: 5%;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.bottomBar input {
+  border: 1px black solid;
+  height: 100%;
+}
+.bBMsg {
+  width: 65%;
+}
+.bBUser {
+  width: 10%;
+}
+.bBDB {
+  width: 10%;
+}
+.icon {
+  width: 2rem;
+}
+
+button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: start;
+  padding: 0.5rem;
+}
+.tabButton {
+  background-color: hsl(0, 0%, 65%);
+  border: none;
+  border-radius: 0.4rem 0.4rem 0 0;
+  padding: 0.7rem;
+}
+.active {
+  background-color: lightgray;
+  border: 1px solid hsl(0, 0%, 65%);
+  border-bottom: none;
+}
+.tabContent {
+  border: 1px solid hsl(0, 0%, 65%);
+}
