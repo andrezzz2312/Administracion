@@ -132,18 +132,24 @@
               </div>
             </div>
             <div class="topBar">
-              <div class="topBar_btn">
+              <div
+                title="Crear nueva recepcion de transferencia"
+                class="topBar_btn"
+              >
                 <img class="icon" src="/assets/icons/tarjetas.png" />
                 Nuevo[F2]
               </div>
-              <div class="topBar_btn">
+              <div
+                title="Guardar la informacion de los productos ingresados"
+                class="topBar_btn"
+              >
                 <img class="icon" src="/assets/icons/tarjetas.png" />
                 Emitir
               </div>
-              <div class="topBar_btn">
+              <div title="Cerrar la ventana " class="topBar_btn">
                 <img class="icon" src="/assets/icons/tarjetas.png" />
                 Salir[Esc]
-              </div>
+              </divtclass=>
             </div>
             <div class="row" style="justify-content: space-between">
               <div
@@ -151,7 +157,13 @@
                 style="gap: 0.5rem; height: min-content; align-items: center"
               >
                 <label for="">Contenedor:</label>
-                <input class="input" placeholder="102367" type="text" />
+                <input
+                  title="Ingrese el numero del contenedor"
+                  class="input"
+                  placeholder="102367"
+                  title="Ingresa el numero de la caja que contiene la mercaderia"
+                  type="text"
+                />
               </div>
               <div style="overflow: hidden">
                 <div style="overflow: scroll">
@@ -209,7 +221,14 @@
                     class="row"
                     style="justify-content: start; align-items: start"
                   >
-                    <div class="col" style="gap: 1rem">
+                    <div
+                      class="col"
+                      style="
+                        gap: 2rem;
+                        justify-content: center;
+                        margin-top: 0.5rem;
+                      "
+                    >
                       <label for="">Producto:</label>
                       <label for="">Cod. Producto:</label>
                       <label for="">Cantidad:</label>
@@ -219,23 +238,39 @@
                       <input
                         placeholder="ROLLO TERMICO FARMACIA PH"
                         type="text"
+                        title="Aqui se mostrara el nombre del producto escaneado"
                       />
                       <div
                         class="row"
                         style="padding: 0; justify-content: space-between"
                       >
                         <div class="col" style="gap: 0.5rem">
-                          <input placeholder="17100" type="text" />
-                          <input placeholder="20" type="number" />
+                          <input
+                            title="Aqui se mostrara el codigo del producto"
+                            placeholder="17100"
+                            type="text"
+                          />
+                          <input
+                            title="Aqui se ingresa la cantidad del producto"
+                            placeholder="20"
+                            type="number"
+                          />
                         </div>
                         <div class="row" style="padding: 0">
-                          <div class="col" style="gap: 0.5rem">
+                          <div
+                            class="col"
+                            style="gap: 1rem; margin-top: 0.5rem"
+                          >
                             <label for="">Codigo de barras:</label>
                             <label for="">Estado:</label>
                           </div>
                           <div class="col" style="gap: 0.5rem">
                             <input type="text" />
-                            <select name="cars" id="cars">
+                            <select
+                              title="Aqui se muestra el estado del producto"
+                              name="cars"
+                              id="cars"
+                            >
                               <option value="BUEN ESTADO">BUEN ESTADO</option>
                             </select>
                           </div>
@@ -337,11 +372,11 @@
               </div>
 
               <div class="col" style="gap: 0.5rem; width: 15%">
-                <button style="width: 100%">
+                <button style="width: 100%" title="Grabar la orden ingresada">
                   <i class="fa fa-cloud"></i>
                   Grabar
                 </button>
-                <button style="width: 100%" disabled>
+                <button style="width: 100%" title="Imprimir orden" disabled>
                   <i class="fa fa-cloud"></i>
                   Imprimir
                 </button>
@@ -472,11 +507,11 @@
                   margin-bottom: 4rem;
                 "
               >
-                <button style="width: 100%">
+                <button style="width: 100%" title="Limpiar la orden ingresada">
                   <i class="fa fa-cloud"></i>
                   Limpiar
                 </button>
-                <button style="width: 100%">
+                <button style="width: 100%" title="Cerrar la orden ingresada">
                   <i class="fa fa-cloud"></i>
                   Cerrar
                 </button>
