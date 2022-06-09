@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/stylez.scss" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -37,7 +37,7 @@
     </header>
     <main>
       <div class="left">
-        <button>
+        <button class="toggle">
           <img class="icon" src="/assets/icons/bodega.png" />
           Bodegas
         </button>
@@ -66,14 +66,20 @@
                   <li id="id3" class="folder">Ajustes de inventarios</li>
                 </ul>
               </li>
-              <li id="id1" title="Look, a tool tip!">
-                item1 with key and tooltip
-              </li>
-              <li id="id2">item2</li>
               <li id="id3" class="folder">
-                Folder
-                <em>with some</em>
-                children
+                Reportes
+                <ul>
+                  <li id="id3" class="folder">Ajustes de inventarios</li>
+                </ul>
+              </li>
+              <li id="id3" class="folder">
+                Gestion de cubetas
+                <ul>
+                  <li id="id3" class="folder">Ajustes de inventarios</li>
+                </ul>
+              </li>
+              <li id="id3" class="folder">
+                Reporte Operativo
                 <ul>
                   <li id="id3.1">
                     Sub-item 3.1
@@ -93,34 +99,13 @@
                   </li>
                 </ul>
               </li>
-
-              <li id="id4" class="expanded">
-                Document with some children (expanded on init)
-                <ul>
-                  <li id="id4.1" class="active focused">
-                    Sub-item 4.1 (active and focus on init)
-                    <ul>
-                      <li id="id4.1.1">Sub-item 4.1.1</li>
-                      <li id="id4.1.2">Sub-item 4.1.2</li>
-                    </ul>
-                  </li>
-
-                  <li id="id4.2">
-                    Sub-item 4.2
-                    <ul>
-                      <li id="id4.2.1">Sub-item 4.2.1</li>
-                      <li id="id4.2.2">Sub-item 4.2.2</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="right">
         <div class="modals">
-          <div class="modal">
+          <div class="modal" style="">
             <div class="titleBar">
               Recepcion de transferencias
               <div class="titleBar_btn" style="gap: 0.5rem">
@@ -146,26 +131,30 @@
             <div class="row" style="justify-content: space-between">
               <div class="row" style="gap: 0.5rem">
                 <label for="">Contenedor:</label>
-                <input class="input" type="text" />
+                <input class="input" placeholder="102367" type="text" />
               </div>
-              <div class="col">
-                <table>
-                  <tr>
-                    <th>Orden Egr</th>
-                    <th>Guia de remision</th>
-                    <th>Pedido N</th>
-                  </tr>
-                  <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                  </tr>
-                  <tr>
-                    <td>Centro comercial</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                  </tr>
-                </table>
+              <div style="overflow: hidden">
+                <div style="overflow: scroll">
+                  <div class="col" style="width: 19vw">
+                    <table>
+                      <tr>
+                        <th>Orden Egr</th>
+                        <th>Guia de remision</th>
+                        <th>Pedido N</th>
+                      </tr>
+                      <tr>
+                        <td>2401521</td>
+                        <td>001051-0000000140391</td>
+                        <td>462179337</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row" style="justify-content: center">
@@ -196,22 +185,28 @@
 
               <div id="London" class="col tabContent city">
                 <div class="row" style="display: block">
-                  <div class="row" style="justify-self: stretch">
-                    <div class="col" style="gap: 0.8rem">
+                  <div
+                    class="row"
+                    style="justify-content: start; align-items: start"
+                  >
+                    <div class="col" style="gap: 1rem">
                       <label for="">Producto:</label>
                       <label for="">Cod. Producto:</label>
                       <label for="">Cantidad:</label>
                       <label for="">Observacion:</label>
                     </div>
                     <div class="col" style="gap: 0.5rem; flex-basis: 80%">
-                      <input type="text" />
+                      <input
+                        placeholder="ROLLO TERMICO FARMACIA PH"
+                        type="text"
+                      />
                       <div
                         class="row"
                         style="padding: 0; justify-content: space-between"
                       >
                         <div class="col" style="gap: 0.5rem">
-                          <input type="text" />
-                          <input type="number" />
+                          <input placeholder="17100" type="text" />
+                          <input placeholder="20" type="number" />
                         </div>
                         <div class="row" style="padding: 0">
                           <div class="col" style="gap: 0.5rem">
@@ -226,69 +221,73 @@
                           </div>
                         </div>
                       </div>
-                      <input type="text" />
                     </div>
                   </div>
                 </div>
-                <div class="row" style="width: 100%; justify-content: center">
-                  <table style="height: 8rem; width: 100%">
-                    <tr>
-                      <th>Codigo</th>
-                      <th>Nombre</th>
-                      <th>Cantidad</th>
-                      <th>Cantidad</th>
-                      <th>Estado</th>
-                      <th>Observaciones</th>
-                    </tr>
-                    <tr>
-                      <td>107780</td>
-                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>BUEN ESTADO</td>
-                      <td>BUEN ESTADO</td>
-                    </tr>
-                    <tr>
-                      <td>107780</td>
-                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>BUEN ESTADO</td>
-                      <td>BUEN ESTADO</td>
-                    </tr>
-                    <tr>
-                      <td>107780</td>
-                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>BUEN ESTADO</td>
-                      <td>BUEN ESTADO</td>
-                    </tr>
-                    <tr>
-                      <td>107780</td>
-                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>BUEN ESTADO</td>
-                      <td>BUEN ESTADO</td>
-                    </tr>
-                    <tr>
-                      <td>107780</td>
-                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>BUEN ESTADO</td>
-                      <td>BUEN ESTADO</td>
-                    </tr>
-                    <tr>
-                      <td>107780</td>
-                      <td>SHAMP SEDAL RIZOSX340ML +C/PEI...</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>BUEN ESTADO</td>
-                      <td>BUEN ESTADO</td>
-                    </tr>
-                  </table>
+                <div
+                  class="row"
+                  style="width: 100%; justify-content: center; overflow: hidden"
+                >
+                  <div style="overflow: scroll; width: 100%">
+                    <table style="height: 15rem">
+                      <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Cantidad</th>
+                        <th>Estado</th>
+                        <th>Observaciones</th>
+                      </tr>
+                      <tr>
+                        <td>17100</td>
+                        <td>ROLLO TERMICO FARMACIA PH</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>BUEN ESTADO</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
               </div>
 
@@ -297,6 +296,485 @@
                 class="row tabContent city col"
                 style="display: none"
               ></div>
+            </div>
+          </div>
+          <div class="modal" style="display: none">
+            <div class="titleBar">
+              Fe de Recepcion Transferencia
+              <div class="titleBar_btn" style="gap: 0.5rem">
+                <i class="fa fa-cloud"></i>
+                <i class="fa fa-cloud"></i>
+                <i class="fa fa-cloud"></i>
+              </div>
+            </div>
+            <div class="row" style="gap: 2rem; margin-top: 2rem">
+              <div
+                class="topBar"
+                style="padding: 1rem; width: 80%; align-items: center"
+              >
+                <label for="">Orden de egreso:</label>
+                <input placeholder="2401543" type="text" />
+              </div>
+
+              <div class="col" style="gap: 0.5rem; width: 15%">
+                <button style="width: 100%">
+                  <i class="fa fa-cloud"></i>
+                  Grabar
+                </button>
+                <button style="width: 100%" disabled>
+                  <i class="fa fa-cloud"></i>
+                  Imprimir
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="row"
+              style="align-items: stretch; gap: 2rem; overflow: hidden"
+            >
+              <div
+                style="
+                  margin-top: 2rem;
+                  width: 80%;
+                  height: 40vh;
+                  overflow: scroll;
+                "
+              >
+                <table style="width: 100%">
+                  <tr class="tableTitle_federec">
+                    <th>Guia Remision</th>
+                    <th>Fecha</th>
+                    <th>Observacion</th>
+                    <th>#bultos</th>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+
+              <div
+                class="col"
+                style="
+                  gap: 0.5rem;
+                  width: 15%;
+
+                  justify-content: flex-end;
+                  align-items: flex-end;
+                  margin-bottom: 4rem;
+                "
+              >
+                <button style="width: 100%">
+                  <i class="fa fa-cloud"></i>
+                  Limpiar
+                </button>
+                <button style="width: 100%">
+                  <i class="fa fa-cloud"></i>
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal" style="display: none; width: 90%">
+            <div class="titleBar">
+              Control Novedades de Transferencias
+
+              <div class="titleBar_btn" style="gap: 0.5rem">
+                <i class="fa fa-cloud"></i>
+                <i class="fa fa-cloud"></i>
+                <i class="fa fa-cloud"></i>
+              </div>
+            </div>
+            <div class="row" style="gap: 2rem; margin-top: 2rem">
+              <div
+                class="topBar"
+                style="padding: 1rem; width: 80%; align-items: center"
+              >
+                <label for="">Bodega:</label>
+                <input placeholder="PG063" type="text" />
+                <input placeholder="PH GYE CITYMALL" type="text" />
+              </div>
+              <div class="col" style="gap: 0.5rem; width: 15%">
+                <button style="width: 100%">
+                  <i class="fa fa-cloud"></i>
+                  Confirmar
+                </button>
+                <button style="width: 100%">
+                  <i class="fa fa-cloud"></i>
+                  Refrescar
+                </button>
+                <button style="width: 100%">
+                  <i class="fa fa-cloud"></i>
+                  Cerrar
+                </button>
+              </div>
+            </div>
+            <div
+              class="row div_controlN"
+              style="align-items: center; gap: 0.5rem; justify-content: center"
+            >
+              <label for="">Descripcion:</label>
+              <input id="descripcion" type="text" />
+              <label for="">Falt. físico:</label>
+              <input placeholder="0" type="number" disabled />
+              <label for="">Sobr. mal estado:</label>
+              <input placeholder="0" type="number" disabled />
+              <label for="">Sobr. físico:</label>
+              <input placeholder="0" type="number" disabled />
+            </div>
+            <div
+              class="row"
+              style="align-items: stretch; gap: 2rem; overflow: hidden"
+            >
+              <div style="width: 100%; height: 40vh; overflow: scroll">
+                <table style="width: 100%">
+                  <tr class="tableTitle_federec">
+                    <th>Novedad</th>
+                    <th>Codigo</th>
+                    <th>Cod.Proveedor</th>
+                    <th>Descripcion</th>
+                    <th>Unidades</th>
+                    <th>Uni. Fisicas</th>
+                    <th>Unid.Mal Estado</th>
+                    <th>Falt.Fisico</th>
+                    <th>Sob. Mal Estado</th>
+                    <th>Sobrante Fisico</th>
+                    <th>Ingresar</th>
+                    <th>Recuperar</th>
+                    <th>Estado</th>
+                    <th>Descripcion</th>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td>473043017</td>
+                    <td>28483</td>
+                    <td>28483</td>
+                    <td>EQUIPO VENOC...</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>pendiente</td>
+                    <td>625</td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="tableRow_federec">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
