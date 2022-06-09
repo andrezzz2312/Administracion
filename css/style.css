@@ -11,7 +11,7 @@
 * {
   font-family: 'Arial', sans-serif;
   font-weight: 400;
-  font-size: calc(4px + (10 - 4) * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(7px + (13 - 7) * ((100vw - 320px) / (1440 - 320)));
 }
 body {
   display: flex;
@@ -55,7 +55,7 @@ main {
 }
 tr td {
   overflow-x: hidden;
-  text-align: end;
+  text-align: start;
 }
 .right {
   display: flex;
@@ -68,15 +68,19 @@ tr td {
   width: 100%;
   background-color: gray;
 }
+tr {
+  height: 2rem;
+}
 .modal {
   background-color: lightgray;
-  width: 80%;
+  width: 60%;
 
   padding: 0.2rem;
 }
 .titleBar {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
   background: linear-gradient(
@@ -106,8 +110,15 @@ tr td {
   display: flex;
   flex-direction: column;
 }
-.input {
-  height: 1rem;
+.table_federec > * {
+  height: 5rem;
+}
+
+.tableRow_federec > * {
+  height: 2rem;
+}
+
+input {
   padding: 0.5rem;
 }
 
@@ -120,9 +131,10 @@ td {
 
 table {
   white-space: nowrap;
-  overflow: scroll;
   border-collapse: collapse;
-  display: block;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 table * {
   overflow: hidden;
@@ -133,6 +145,7 @@ td {
   border-top-width: 0;
   border-left-width: 0;
 }
+
 .tabContent .col label {
   margin-left: 1rem;
 }
@@ -151,7 +164,7 @@ select {
   justify-content: center;
 }
 .bottomBar {
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0.5rem;
   align-items: center;
   height: 5%;
@@ -162,7 +175,6 @@ select {
 }
 .bottomBar input {
   border: 1px black solid;
-  height: 100%;
 }
 .bBMsg {
   width: 65%;
@@ -176,7 +188,12 @@ select {
 .icon {
   width: 2rem;
 }
-
+.div_controlN > input {
+  width: 5%;
+}
+#descripcion {
+  width: 30%;
+}
 button {
   cursor: pointer;
   display: flex;
