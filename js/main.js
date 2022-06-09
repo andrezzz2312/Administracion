@@ -20,10 +20,10 @@ $(function () {
 const toggle = document.querySelector('.toggle')
 const modal = document.querySelectorAll('.modal')
 let counter = 0
-modal.forEach((e, f) => {
-  modal[f].style.display = 'none'
-  modal[2].style.display = 'block'
-})
+// modal.forEach((e, f) => {
+//   modal[f].style.display = 'none'
+//   modal[2].style.display = 'block'
+// })
 toggle.addEventListener('click', function (e) {
   counter = counter + 1
   modal.forEach((e, f) => {
