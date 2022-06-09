@@ -42,10 +42,16 @@ $('#tree').fancytree({
   dblclick: function (event, data) {
     // A node was activated: display its title:
     var keyNode = data.node.key
-    if (keyNode === 'op4') {
+    if (keyNode === 'fer') {
       modal.forEach((e, f) => {
         modal[f].style.display = 'none'
         modal[0].style.display = 'block'
+      })
+    }
+    if (keyNode === 're') {
+      modal.forEach((e, f) => {
+        modal[f].style.display = 'none'
+        modal[1].style.display = 'block'
       })
     }
   },
