@@ -38,3 +38,30 @@ toggle.addEventListener('click', function (e) {
     counter = -1
   }
 })
+$('#tree').fancytree({
+  dblclick: function (event, data) {
+    // A node was activated: display its title:
+    var keyNode = data.node.key
+    if (keyNode === 'op4') {
+      modal.forEach((e, f) => {
+        modal[f].style.display = 'none'
+        modal[0].style.display = 'block'
+      })
+    }
+  },
+})
+// $('#tree').fancytree({
+//   dblclick: function (event, data) {
+//     console.log('epic')
+//     //				data.node.toggleSelect();
+//   },
+// })
+
+// const op4 = document.querySelector('#op4')
+// op4.addEventListener('fancytreeclick', function (e) {
+//   console.log('asd')
+//   modal.forEach((e, f) => {
+//     modal[f].style.display = 'none'
+//     modal[0].style.display = 'block'
+//   })
+// })
