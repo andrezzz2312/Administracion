@@ -20,10 +20,7 @@ $(function () {
 const bodegas = document.querySelector('#bodegas')
 const modal = document.querySelectorAll('.modal')
 let counter = 0
-// modal.forEach((e, f) => {
-//   modal[f].style.display = 'none'
-//   modal[2].style.display = 'block'
-// })
+
 const fileManager = document.querySelector('.fileManager')
 
 bodegas.addEventListener('click', function () {
