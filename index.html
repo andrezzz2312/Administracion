@@ -36,6 +36,12 @@
       </nav>
     </header>
     <main>
+     <div class="container " style="flex-direction: row;gap: 1rem; ">
+     <img src="assets/icons/left-arrow.png" class="arrow" alt="">
+      <div class="arrowText">
+        Clickea para ingresar a bodega
+      </div>
+     </div>
       <div class="left">
        
         <button id='bodegas' >
@@ -57,14 +63,14 @@
         <div class="fileManager" style="display: none;">
           <div id="tree" >
             <ul id="treeData" style="display: none">
-              <li id="id3" class="folder">
+              <li id="oper" class="folder">
                 Operaciones
                 <ul>
                   <li id="id3" class="folder">Ajustes de inventarios</li>
-                  <li id="id3" class="folder">
+                  <li id="trans" class="folder">
                     Transferencias
                     <ul>
-                      <li id="id3" class="folder">
+                      <li id="transf" class="folder">
                         Transf-Recepcion
                         <ul>
                           <li>Fe Recepcion de Transferencias</li>
@@ -384,11 +390,11 @@
                 style="padding: 1rem; width: 80%; align-items: center"
               >
                 <label for="">Orden de egreso:</label>
-                <input title="Ingresa el codigo de egreso que esta en la hoja de registro" placeholder="2401543" type="text" />
+                <input id="orde" title="Ingresa el codigo de egreso que esta en la hoja de registro" placeholder="2401521" type="text" />
               </div>
 
               <div class="col" style="gap: 0.5rem; width: 15%">
-                <button style="width: 100%" title="Grabar la orden ingresada">
+                <button id="save" style="width: 100%" title="Grabar la orden ingresada">
                   <img class="modalIcon" src="/assets/icons/save.png" />
                   Grabar
                 </button>

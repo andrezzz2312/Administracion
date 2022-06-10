@@ -79,6 +79,28 @@ tr td {
   height: 100%;
   pointer-events: none;
 }
+.container {
+  display: flex;
+  position: absolute;
+  left: 14%;
+  top: 0;
+  pointer-events: none;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  z-index: 2;
+}
+.arrow {
+  width: 8rem;
+}
+.arrowText {
+  padding: 1rem;
+  width: 20rem;
+  background-color: lightskyblue;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  height: min-content;
+}
 
 .alert {
   background-color: hsl(0, 0%, 100%);

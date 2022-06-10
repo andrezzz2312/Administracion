@@ -19,11 +19,17 @@ $(function () {
 
 const bodegas = document.querySelector('#bodegas')
 const modal = document.querySelectorAll('.modal')
+const container = document.querySelector('.container')
+const arrowText = document.querySelector('.arrowText')
+const orde = document.querySelector('#orde')
+const save = document.querySelector('#save')
 let counter = 0
-
+let checker = 0
 const fileManager = document.querySelector('.fileManager')
 
 bodegas.addEventListener('click', function () {
+  container.style.transform = 'translateY(170%)'
+  arrowText.textContent = 'Ingresar en Operaciones'
   console.log('asd')
   console.log(fileManager)
   fileManager.style.display = 'block'
@@ -37,13 +43,54 @@ $('#tree').fancytree({
       modal.forEach((e, f) => {
         modal[f].style.display = 'none'
         modal[0].style.display = 'block'
+        if (checker === 1) {
+          container.style.transform = 'translate(170%, 138%)'
+          arrowText.textContent = 'Se mostrara la orden de egreso '
+          setTimeout(() => {
+            container.style.transform = 'translate(170%, 305%)'
+
+            arrowText.textContent =
+              'En dichos campos se mostrara la informacion del producto que ha sido pasado por el escaner'
+            setTimeout(() => {
+              container.style.transform = 'translate(70%, 50%)'
+
+              arrowText.textContent = 'Click en el icono de emitir'
+            }, 5000)
+          }, 5000)
+        }
       })
     }
     if (keyNode === 'fer') {
       modal.forEach((e, f) => {
         modal[f].style.display = 'none'
         modal[1].style.display = 'block'
+        container.style.transform = 'translate(110%, 70%)'
+        arrowText.textContent = 'Ingresar el número de la orden de egreso '
+        orde.addEventListener('input', function () {
+          container.style.transform = 'translate(240%, 50%)'
+          arrowText.textContent = 'Grabar la informacion ingresada '
+          save.addEventListener('click', function () {
+            container.style.transform = 'translate(20%, 300%)'
+            arrowText.textContent =
+              'Abrir la opcion de Recepcion de transferencia FPD '
+            checker = 1
+          })
+        })
       })
+    }
+  },
+  expand: function (event, data) {
+    var keyNode = data.node.key
+    if (keyNode === 'oper') {
+      container.style.transform = 'translateY(220%)'
+      arrowText.textContent = 'Ingresar en Transferencias'
+    } else if (keyNode === 'trans') {
+      container.style.transform = 'translateY(240%)'
+      arrowText.textContent = 'Ingresar en Transf-Recepcion'
+    } else if (keyNode === 'transf') {
+      container.style.transform = 'translate(20%, 320%)'
+      arrowText.textContent =
+        'Abrir la opcion Fe Recepción de Transferencias FPD '
     }
   },
 })
@@ -56,9 +103,13 @@ const no = document.querySelector('#no')
 
 emitir.addEventListener('click', function () {
   alert.style.display = 'block'
+  container.style.transform = 'translate(195%, 428%)'
+  arrowText.textContent =
+    'Selecciona si para grabar la informacion de los productos escaneados '
   si.addEventListener('click', function () {
     alert.style.display = 'none'
     emitir.setAttribute('disabled', '')
+    container.style.opacity = '0'
   })
   no.addEventListener('click', function () {
     alert.style.display = 'none'
