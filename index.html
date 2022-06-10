@@ -37,28 +37,25 @@
     </header>
     <main>
       <div class="left">
-        <button class="toggle">
-          <img class="icon" src="/assets/icons/bodega.png" />
+       
+        <button id='bodegas' >
+          <img class="leftIcon" src="/assets/icons/house.png" />
           Bodegas
         </button>
         <button>
-          <img class="icon" src="/assets/icons/bodega.png" />
-          Bodegas
-        </button>
-        <button>
-          <i class="fa fa-cloud"></i>
+         <img class="leftIcon" src="/assets/icons/ventas.png" />
           Ventas
         </button>
         <button>
-          <img class="icon" src="/assets/icons/tarjetas.png" />
+          <img class="leftIcon" src="/assets/icons/tarjetas.png" />
           Tarjetas
         </button>
         <button>
-          <i class="fa fa-cloud"></i>
+         <img class="leftIcon" src="/assets/icons/compras.png" />
           Compras
         </button>
-        <div class="fileManager">
-          <div id="tree">
+        <div class="fileManager" style="display: none;">
+          <div id="tree" >
             <ul id="treeData" style="display: none">
               <li id="id3" class="folder">
                 Operaciones
@@ -122,34 +119,52 @@
       </div>
       <div class="right">
         <div class="modals">
-          <div class="modal" style="display: none">
+          <div class="centerContainer">
+            <div class="alert" draggable="true" >
+              <div class="row" style="justify-content: space-between; padding: 0.5rem 0.8rem 0.5rem 0.8rem; height: 15%;">
+                Confirmacion de operacion
+                <button class="alert_x">&#x2715</button>
+              </div>
+              <div class="row" style="justify-content:center;align-items:center;height: 60%; gap: 1rem;">
+                <img src="assets/icons/question.png" alt="">
+                ¿Está seguro que desea grabar esta transacción?
+              </div>
+              <div class="row" style="height: 25%;background-color: hsl(0, 0%, 94%);align-items: center;justify-content: flex-end; gap: 1rem;">
+                <button id="si" class="alert_btn" >Si</button>
+                <button id="no" class="alert_btn" style="margin-right: 1rem;">No</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal" id="rec" style="display: none">
             <div class="titleBar">
-              Recepcion de transferencias
+              <div style=" padding: 0.5rem;">Recepcion de transferencias</div>  
+              
               <div class="titleBar_btn" style="gap: 0.5rem">
-                <i class="fa fa-cloud"></i>
-                <i class="fa fa-cloud"></i>
-                <i class="fa fa-cloud"></i>
+                        <img class="titleIcon" src="/assets/icons/minimize.png" />
+                  <img class="titleIcon" src="/assets/icons/expand.png" />
+                  <img class="titleIcon" id="closet" src="/assets/icons/closet.png" />
               </div>
             </div>
             <div class="topBar">
-              <div
+              <button
                 title="Crear nueva recepcion de transferencia"
                 class="topBar_btn"
               >
-                <img class="icon" src="/assets/icons/tarjetas.png" />
+                <img class="icon" src="/assets/icons/sheet.ico" />
                 Nuevo[F2]
-              </div>
-              <div
+              </b>
+              <button
+              id="emitir"
                 title="Guardar la informacion de los productos ingresados"
                 class="topBar_btn"
               >
-                <img class="icon" src="/assets/icons/tarjetas.png" />
+                <img class="icon" src="/assets/icons/emitir.ico" />
                 Emitir
-              </div>
-              <div title="Cerrar la ventana " class="topBar_btn">
-                <img class="icon" src="/assets/icons/tarjetas.png" />
+              </button>
+              <button title="Cerrar la ventana " class="topBar_btn">
+                <img class="icon" src="/assets/icons/power.png" />
                 Salir[Esc]
-              </div>
+              </button>
             </div>
             <div class="row" style="justify-content: space-between">
               <div
@@ -355,11 +370,12 @@
           </div>
           <div class="modal" style="display: none">
             <div class="titleBar">
-              Fe de Recepcion Transferencia
+              <div style=" padding: 0.5rem;">Fe de Recepcion Transferencia</div>    
+              
               <div class="titleBar_btn" style="gap: 0.5rem">
-                <i class="fa fa-cloud"></i>
-                <i class="fa fa-cloud"></i>
-                <i class="fa fa-cloud"></i>
+                   <img class="titleIcon" src="/assets/icons/minimize.png" />
+                  <img class="titleIcon" src="/assets/icons/expand.png" />
+                  <img class="titleIcon" id="closet" src="/assets/icons/closet.png" />
               </div>
             </div>
             <div class="row" style="gap: 2rem; margin-top: 2rem">
@@ -368,16 +384,16 @@
                 style="padding: 1rem; width: 80%; align-items: center"
               >
                 <label for="">Orden de egreso:</label>
-                <input placeholder="2401543" type="text" />
+                <input title="Ingresa el codigo de egreso que esta en la hoja de registro" placeholder="2401543" type="text" />
               </div>
 
               <div class="col" style="gap: 0.5rem; width: 15%">
                 <button style="width: 100%" title="Grabar la orden ingresada">
-                  <i class="fa fa-cloud"></i>
+                  <img class="modalIcon" src="/assets/icons/save.png" />
                   Grabar
                 </button>
                 <button style="width: 100%" title="Imprimir orden" disabled>
-                  <i class="fa fa-cloud"></i>
+                  <img class="modalIcon" src="/assets/icons/print.png" />
                   Imprimir
                 </button>
               </div>
@@ -508,11 +524,11 @@
                 "
               >
                 <button style="width: 100%" title="Limpiar la orden ingresada">
-                  <i class="fa fa-cloud"></i>
+                  <img class="modalIcon" src="/assets/icons/papers.png" />
                   Limpiar
                 </button>
                 <button style="width: 100%" title="Cerrar la orden ingresada">
-                  <i class="fa fa-cloud"></i>
+                   <img class="modalIcon" src="/assets/icons/close.png" />
                   Cerrar
                 </button>
               </div>
@@ -520,12 +536,14 @@
           </div>
           <div class="modal" style="display: none; width: 90%">
             <div class="titleBar">
-              Control Novedades de Transferencias
+              <div style=" padding: 0.5rem;"> Control Novedades de Transferencias</div>             
 
-              <div class="titleBar_btn" style="gap: 0.5rem">
-                <i class="fa fa-cloud"></i>
-                <i class="fa fa-cloud"></i>
-                <i class="fa fa-cloud"></i>
+              <div class="titleBar_btn" style="gap: 0.5rem">               
+                
+                  <img class="titleIcon" src="/assets/icons/minimize.png" />
+                  <img class="titleIcon" src="/assets/icons/expand.png" />
+                  <img class="titleIcon" id="closet" src="/assets/icons/closet.png" />
+                
               </div>
             </div>
             <div class="row" style="gap: 2rem; margin-top: 2rem">
@@ -539,15 +557,15 @@
               </div>
               <div class="col" style="gap: 0.5rem; width: 15%">
                 <button style="width: 100%">
-                  <i class="fa fa-cloud"></i>
+                  <img class="modalIcon" id="closet" src="/assets/icons/play.png" />
                   Confirmar
                 </button>
                 <button style="width: 100%">
-                  <i class="fa fa-cloud"></i>
+                 <img class="modalIcon" id="closet" src="/assets/icons/refresh.png" />
                   Refrescar
                 </button>
                 <button style="width: 100%">
-                  <i class="fa fa-cloud"></i>
+                  <img class="modalIcon" id="closet" src="/assets/icons/close.png" />
                   Cerrar
                 </button>
               </div>
@@ -834,14 +852,14 @@
           </div>
         </div>
         <div class="bottomBar">
-          <i class="fa fa-cloud"></i>
+          <img class="bottomBar_icon" src="/assets/icons/information.png" />
           <input disabled class="bBMsg" type="text" />
-          <i class="fa fa-cloud"></i>
+          <img class="bottomBar_icon" src="/assets/icons/user.png" />
           <input disabled class="bBUser" type="text" />
-          <i class="fa fa-cloud"></i>
+          <img class="bottomBar_icon" src="/assets/icons/database.png" />
           <input disabled class="bBDB" type="text" />
-          <i class="fa fa-cloud"></i>
-          <i class="fa fa-cloud"></i>
+          <img class="bottomBar_icon" src="/assets/icons/check.png" />
+          <img class="bottomBar_icon" src="/assets/icons/check.png" />
         </div>
       </div>
     </main>

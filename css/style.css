@@ -68,6 +68,43 @@ tr td {
   width: 100%;
   background-color: gray;
 }
+.centerContainer {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.alert {
+  background-color: hsl(0, 0%, 100%);
+  width: 25%;
+  height: 25%;
+  pointer-events: all;
+  z-index: 1;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid hsl(0, 0%, 45%);
+}
+.alert_btn {
+  /* padding: 0.2rem 2.5rem 0.2rem 2.5rem; */
+
+  display: inline-block;
+  text-align: center;
+
+  width: 7rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+.alert_x {
+  cursor: pointer;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+}
 tr {
   height: 2rem;
 }
@@ -82,7 +119,7 @@ tr {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
+
   background: linear-gradient(
     360deg,
     rgba(191, 217, 255, 1) 0%,
@@ -93,6 +130,13 @@ tr {
 .titleBar_btn {
   display: flex;
   flex-direction: row;
+  margin-right: 0.5rem;
+}
+#tree {
+  overflow-x: scroll;
+}
+.fancytree-container {
+  width: 110%;
 }
 .topBar {
   display: flex;
@@ -162,6 +206,13 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  width: 10%;
+  border: none;
+  background-color: lightgray;
+}
+.topBar_btn:disabled {
+  cursor: not-allowed;
 }
 .bottomBar {
   justify-content: space-evenly;
@@ -186,7 +237,19 @@ select {
   width: 10%;
 }
 .icon {
-  width: 2rem;
+  width: 4rem;
+}
+.leftIcon {
+  width: 3rem;
+}
+.modalIcon {
+  width: 2em;
+}
+.titleIcon {
+  width: 2em;
+}
+.bottomBar_icon {
+  width: 2.5rem;
 }
 .div_controlN > input {
   width: 5%;
@@ -200,7 +263,10 @@ button {
   align-items: center;
   gap: 0.5rem;
   text-align: start;
-  padding: 0.5rem;
+  padding: 0.2rem;
+}
+button:disabled {
+  cursor: not-allowed;
 }
 .tabButton {
   background-color: hsl(0, 0%, 65%);
