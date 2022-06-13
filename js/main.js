@@ -28,7 +28,7 @@ let checker = 0
 const fileManager = document.querySelector('.fileManager')
 
 bodegas.addEventListener('click', function () {
-  container.style.transform = 'translateY(170%)'
+  container.style.transform = 'translateY(14rem)'
   arrowText.textContent = 'Ingresar en Operaciones'
   console.log('asd')
   console.log(fileManager)
@@ -82,10 +82,10 @@ $('#tree').fancytree({
   expand: function (event, data) {
     var keyNode = data.node.key
     if (keyNode === 'oper') {
-      container.style.transform = 'translateY(220%)'
+      container.style.transform = 'translateY(17.5rem)'
       arrowText.textContent = 'Ingresar en Transferencias'
     } else if (keyNode === 'trans') {
-      container.style.transform = 'translateY(240%)'
+      container.style.transform = 'translateY(19rem)'
       arrowText.textContent = 'Ingresar en Transf-Recepcion'
     } else if (keyNode === 'transf') {
       container.style.transform = 'translate(20%, 320%)'
