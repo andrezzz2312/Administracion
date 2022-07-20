@@ -3,304 +3,304 @@
 *,
 ::after,
 ::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 * {
-  font-family: 'Arial', sans-serif;
-  font-weight: 400;
-  font-size: calc(5px + (11 - 5) * ((100vw - 320px) / (1440 - 320)));
+	font-family: 'Arial', sans-serif;
+	font-weight: 400;
+	font-size: calc(5px + (11 - 5) * ((100vw - 320px) / (1440 - 320)));
 }
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
 }
 
 nav ul {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  list-style-type: none;
-  background-color: lightgray;
-  padding: 0.3rem 1rem;
-  height: 5%;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	list-style-type: none;
+	background-color: lightgray;
+	padding: 0.3rem 1rem;
+	height: 5%;
 }
 nav ul li {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 header li a {
-  color: black;
-  text-decoration: none;
+	color: black;
+	text-decoration: none;
 }
 
 main {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
 }
 .left {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  height: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	height: 100%;
 }
 .fileManager {
-  height: 100%;
+	height: 100%;
 }
 tr td {
-  overflow-x: hidden;
-  text-align: start;
+	overflow-x: hidden;
+	text-align: start;
 }
 .right {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
 }
 .modals {
-  height: 100%;
-  width: 100%;
-  background-color: gray;
+	height: 100%;
+	width: 100%;
+	background-color: gray;
 }
 .centerContainer {
-  display: flex;
-  position: absolute;
-  left: 0;
-  top: 0;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
 }
 .container {
-  display: flex;
-  position: absolute;
-  left: 14%;
-  top: 3.4%;
-  pointer-events: none;
-  align-items: center;
-  transition: all 1s ease-in-out;
-  z-index: 2;
+	display: flex;
+	position: absolute;
+	left: 14%;
+	top: 2.7%;
+	pointer-events: none;
+	align-items: center;
+	transition: all 1s ease-in-out;
+	z-index: 2;
 }
 .arrow {
-  width: 8rem;
+	width: 8rem;
 }
 .arrowText {
-  padding: 1rem;
-  width: 20rem;
-  background-color: lightskyblue;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  height: min-content;
+	padding: 1rem;
+	width: 20rem;
+	background-color: lightskyblue;
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	height: min-content;
 }
 
 .alert {
-  background-color: hsl(0, 0%, 100%);
-  width: 25%;
-  height: 25%;
-  pointer-events: all;
-  z-index: 1;
-  display: none;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border: 1px solid hsl(0, 0%, 45%);
+	background-color: hsl(0, 0%, 100%);
+	width: 25%;
+	height: 25%;
+	pointer-events: all;
+	z-index: 1;
+	display: none;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border: 1px solid hsl(0, 0%, 45%);
 }
 .alert_btn {
-  /* padding: 0.2rem 2.5rem 0.2rem 2.5rem; */
+	/* padding: 0.2rem 2.5rem 0.2rem 2.5rem; */
 
-  display: inline-block;
-  text-align: center;
+	display: inline-block;
+	text-align: center;
 
-  width: 7rem;
-  padding: 0.2rem 0.5rem;
-  cursor: pointer;
+	width: 7rem;
+	padding: 0.2rem 0.5rem;
+	cursor: pointer;
 }
 .alert_x {
-  cursor: pointer;
-  border: none;
-  background-color: hsl(0, 0%, 100%);
+	cursor: pointer;
+	border: none;
+	background-color: hsl(0, 0%, 100%);
 }
 tr {
-  height: 2rem;
+	height: 2rem;
 }
 .modal {
-  background-color: lightgray;
-  width: 60%;
+	background-color: lightgray;
+	width: 60%;
 
-  padding: 0.2rem;
+	padding: 0.2rem;
 }
 .titleBar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 
-  background: linear-gradient(
-    360deg,
-    rgba(191, 217, 255, 1) 0%,
-    rgba(152, 172, 204, 1) 68%,
-    rgba(132, 145, 178, 1) 100%
-  );
+	background: linear-gradient(
+		360deg,
+		rgba(191, 217, 255, 1) 0%,
+		rgba(152, 172, 204, 1) 68%,
+		rgba(132, 145, 178, 1) 100%
+	);
 }
 .titleBar_btn {
-  display: flex;
-  flex-direction: row;
-  margin-right: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	margin-right: 0.5rem;
 }
 #tree {
-  overflow-x: scroll;
+	overflow-x: scroll;
 }
 .fancytree-container {
-  width: 110%;
+	width: 110%;
 }
 .topBar {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  padding: 0.5rem;
-  border: 1px solid hsl(0, 0%, 45%);
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	padding: 0.5rem;
+	border: 1px solid hsl(0, 0%, 45%);
 }
 .row {
-  display: flex;
-  flex-direction: row;
-  padding: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	padding: 0.5rem;
 }
 .col {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .table_federec > * {
-  height: 5rem;
+	height: 5rem;
 }
 
 .tableRow_federec > * {
-  height: 2rem;
+	height: 2rem;
 }
 
 input {
-  padding: 0.5rem;
+	padding: 0.5rem;
 }
 
 table,
 th,
 td {
-  background-color: white;
-  border: 1px hsl(0, 0%, 65%) solid;
+	background-color: white;
+	border: 1px hsl(0, 0%, 65%) solid;
 }
 
 table {
-  white-space: nowrap;
-  border-collapse: collapse;
-  position: sticky;
-  top: 0;
-  width: 100%;
+	white-space: nowrap;
+	border-collapse: collapse;
+	position: sticky;
+	top: 0;
+	width: 100%;
 }
 table * {
-  overflow: hidden;
+	overflow: hidden;
 }
 th,
 td {
-  padding: 0.3rem 0.5rem;
-  border-top-width: 0;
-  border-left-width: 0;
+	padding: 0.3rem 0.5rem;
+	border-top-width: 0;
+	border-left-width: 0;
 }
 
 .tabContent .col label {
-  margin-left: 1rem;
+	margin-left: 1rem;
 }
 .tabContent input,
 select {
-  margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 .tabContent .row {
-  align-items: center;
+	align-items: center;
 }
 
 .topBar_btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 10%;
-  border: none;
-  background-color: lightgray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	width: 10%;
+	border: none;
+	background-color: lightgray;
 }
 .topBar_btn:disabled {
-  cursor: not-allowed;
+	cursor: not-allowed;
 }
 .bottomBar {
-  justify-content: space-evenly;
-  padding: 0.5rem;
-  align-items: center;
-  height: 5%;
-  background-color: lightgray;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
+	justify-content: space-evenly;
+	padding: 0.5rem;
+	align-items: center;
+	height: 5%;
+	background-color: lightgray;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
 }
 .bottomBar input {
-  border: 1px black solid;
+	border: 1px black solid;
 }
 .bBMsg {
-  width: 65%;
+	width: 65%;
 }
 .bBUser {
-  width: 10%;
+	width: 10%;
 }
 .bBDB {
-  width: 10%;
+	width: 10%;
 }
 .icon {
-  width: 4rem;
+	width: 4rem;
 }
 .leftIcon {
-  width: 3rem;
+	width: 3rem;
 }
 .modalIcon {
-  width: 2em;
+	width: 2em;
 }
 .titleIcon {
-  width: 2em;
+	width: 2em;
 }
 .bottomBar_icon {
-  width: 2.5rem;
+	width: 2.5rem;
 }
 .div_controlN > input {
-  width: 5%;
+	width: 5%;
 }
 #descripcion {
-  width: 30%;
+	width: 30%;
 }
 button {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-align: start;
-  padding: 0.2rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	text-align: start;
+	padding: 0.2rem;
 }
 button:disabled {
-  cursor: not-allowed;
+	cursor: not-allowed;
 }
 .tabButton {
-  background-color: hsl(0, 0%, 65%);
-  border: none;
-  border-radius: 0.4rem 0.4rem 0 0;
-  padding: 0.7rem;
+	background-color: hsl(0, 0%, 65%);
+	border: none;
+	border-radius: 0.4rem 0.4rem 0 0;
+	padding: 0.7rem;
 }
 .active {
-  background-color: lightgray;
-  border: 1px solid hsl(0, 0%, 65%);
-  border-bottom: none;
+	background-color: lightgray;
+	border: 1px solid hsl(0, 0%, 65%);
+	border-bottom: none;
 }
 .tabContent {
-  border: 1px solid hsl(0, 0%, 65%);
+	border: 1px solid hsl(0, 0%, 65%);
 }
