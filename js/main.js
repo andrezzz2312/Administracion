@@ -104,7 +104,7 @@ const no = document.querySelector('#no')
 
 emitir.addEventListener('click', function () {
 	alert.style.display = 'block'
-	container.style.transform = 'translate(60rem, 43rem)'
+	container.style.transform = 'translate(70rem, 37rem)'
 	arrowText.textContent =
 		'Selecciona si para grabar la informacion de los productos escaneados '
 	si.addEventListener('click', function () {
